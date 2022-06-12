@@ -3,8 +3,10 @@
 
 struct Node {
     double valor;
+
     int coluna;
     int linha;
+    
     Node *direita;
     Node *abaixo;
 };

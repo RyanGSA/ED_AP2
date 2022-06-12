@@ -6,18 +6,45 @@ class SparseMatrix {
     private:
         int linhas;
         int colunas;
-        int nonZeros;
         Node *head;
     public:
-        SparseMatrix(int m, int n); // checar se m,n é valido, se nao for, retornar erro
+        SparseMatrix(int m, int n){
+            linhas = m;
+            colunas = n;
+        }
 
-        ~SparseMatrix();
+        ~SparseMatrix(){
+            
+        }
 
-        void insert(int i, int j, double value); // checar se i,j é valido, se nao for, retornar erro
+        void insert(int i, int j, double value){
+            if(i>linhas || j>colunas){
+                std::cout << "Erro: posicao invalida" << std::endl;
+                return;
+            }
+            else{
 
-        double get(int i, int j); // checar se i,j é valido, se nao for, retornar erro
+            }
+        }
 
-        void print();
+        double get(int i, int j){
+            if(i>linhas || j>colunas){
+                std::cout << "Erro: posicao invalida" << std::endl;
+                return;
+            }
+            else{
+
+            }
+        }
+
+        void print(){
+            for(int i=0; i<linhas; i++){
+                for(int j=0; j<colunas; j++){
+                    std::cout << get(i,j) << " ";
+                }
+                std::cout << std::endl;
+            }
+        }
 };
 
 #endif
