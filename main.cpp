@@ -6,7 +6,6 @@
 int main(){
     
     SparseMatrix *matriz = new SparseMatrix(3,3);
-    matriz->print();
 
     return 0;
 }
